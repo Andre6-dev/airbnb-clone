@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { NgClass } from "@angular/common";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
@@ -13,6 +13,6 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
   styleUrl: './avatar.component.scss'
 })
 export class AvatarComponent {
-  @Input() avatarUrl: string | undefined;
-  @Input() avatarSize?: "avatar-sm" | "avatar-xl";
+  imageUrl = input<string>();
+  avatarSize = input<"avatar-sm" | "avatar-xl">();
 }
